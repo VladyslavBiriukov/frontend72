@@ -1,0 +1,132 @@
+:root {
+  --primary-text-color: rgba(48, 48, 48, 1);
+  --second-text-color: rgba(85, 85, 85, 1);
+  --accent-color: rgba(255, 108, 0, 1);
+  --white-color: rgba(255, 255, 255, 1);
+  --haircuts-color: rgba(157, 164, 189, 1);
+}
+
+body {
+  background-color: rgba(255, 255, 255, 1);
+  color: var(--primary-text-color);
+}
+
+/*navigation*/
+
+.nav {
+  background-color: var(--primary-text-color);
+}
+/*удалить*/
+
+.nav .link {
+  color: var(--white-color);
+
+  text-decoration: none;
+}
+.nav .link:hover,
+.nav .link:focus {
+  color: var(--accent-color);
+}
+/*telephone*/
+
+.tel {
+  color: var(--white-color);
+}
+.tel:hover,
+.tel:focus {
+  color: var(--accent-color);
+}
+/*button*/
+
+.button-booking {
+  color: var(--white-color);
+}
+.button-booking:hover,
+.button-booking:focus {
+  color: var(--accent-color);
+}
+/*inst-youtube*/
+
+.social .link {
+  color: var(--primary-text-color);
+}
+.social .link:hover,
+.social .link:focus {
+  color: var(--accent-color);
+}
+
+/*hero*/
+
+.hero .text {
+  color: var(--haircuts-color);
+}
+.hero .title {
+  color: var(--white-color);
+}
+/*about*/
+.title-about {
+}
+.text-about {
+  color: var(--second-text-color);
+}
+
+/*Services and prices*/
+
+.service .text {
+  color: var(--haircuts-color);
+}
+.service .title {
+  color: var(--white-color);
+}
+.service-price {
+  color: var(--haircuts-color);
+}
+/*Why people come to us?*/
+
+.we {
+}
+.why-we .title {
+}
+.why-we .text-why {
+}
+.why-we .text {
+  color: var(--second-text-color);
+}
+
+/*team*/
+
+.team .title {
+}
+.team .text {
+}
+.team .title-name {
+}
+.team .text-name {
+  color: var(--accent-color);
+}
+/*gallery*/
+.gallary .text {
+  color: ;
+}
+
+/*ONLINE BOOKING*/
+
+/*contacts*/
+
+.contacts .title {
+  color: var(--white-color);
+}
+.contacts .text {
+  color: var(--white-color);
+}
+.contacts .link {
+  color: var(--haircuts-color);
+}
+
+/*footer*/
+.footer .text {
+  color: var(--haircuts-color);
+}
+.footer .link {
+  color: var(--primary-text-color);
+}
