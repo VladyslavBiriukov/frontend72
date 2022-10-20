@@ -9,6 +9,10 @@
 body {
   background-color: rgba(255, 255, 255, 1);
   color: var(--primary-text-color);
+
+  font-family: 'Open Sans';
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 /*navigation*/
@@ -21,6 +25,10 @@ body {
 .nav .link {
   color: var(--white-color);
 
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
   text-decoration: none;
 }
 .nav .link:hover,
@@ -31,6 +39,11 @@ body {
 
 .tel {
   color: var(--white-color);
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
 }
 .tel:hover,
 .tel:focus {
@@ -40,6 +53,13 @@ body {
 
 .button-booking {
   color: var(--white-color);
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+
+  cursor: pointer;
 }
 .button-booking:hover,
 .button-booking:focus {
@@ -49,6 +69,10 @@ body {
 
 .social .link {
   color: var(--primary-text-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 .social .link:hover,
 .social .link:focus {
@@ -59,74 +83,196 @@ body {
 
 .hero .text {
   color: var(--haircuts-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 .hero .title {
   color: var(--white-color);
+
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+
+  letter-spacing: 0.05em;
+}
+.hero .text-second {
+  color: var(--haircuts-color);
+
+  font-size: 18px;
+  line-height: 1.67;
 }
 /*about*/
-.title-about {
+.title-about-first {
+  font-weight: 600;
+  font-size: 11px;
 }
+.title-about {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+}
+
+.text-about-first {
+  color: var(--second-text-color);
+
+  font-size: 18px;
+  line-height: 1.67;
+}
+
 .text-about {
   color: var(--second-text-color);
+
+  font-size: 14px;
+  line-height: 1.86;
+  /* or 186% */
 }
 
 /*Services and prices*/
 
 .service .text {
   color: var(--haircuts-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 .service .title {
   color: var(--white-color);
+
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
 }
 .service-price {
   color: var(--haircuts-color);
+
+  font-size: 18px;
+  line-height: 1.66;
 }
 /*Why people come to us?*/
-
-.we {
+.we .we-numb {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
 }
+.we .we-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+}
+
 .why-we .title {
+  ont-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 .why-we .text-why {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
 }
 .why-we .text {
   color: var(--second-text-color);
+
+  font-size: 18px;
+  line-height: 1.67;
 }
 
 /*team*/
 
 .team .title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
 }
 .team .text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 .team .title-name {
+  font-size: 18px;
+  line-height: 1.55;
 }
 .team .text-name {
   color: var(--accent-color);
+
+  font-size: 14px;
+  line-height: 1.35;
 }
 /*gallery*/
 .gallary .text {
-  color: ;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 
 /*ONLINE BOOKING*/
+
+.booking {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+}
 
 /*contacts*/
 
 .contacts .title {
   color: var(--white-color);
+
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+}
+.adress .adress-link {
+  color: var(--haircuts-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
 }
 .contacts .text {
   color: var(--white-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 .contacts .link {
   color: var(--haircuts-color);
+
+  font-size: 18px;
+  line-height: 1.66;
 }
 
 /*footer*/
 .footer .text {
   color: var(--haircuts-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
 .footer .link {
   color: var(--primary-text-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
 }
