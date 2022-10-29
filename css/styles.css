@@ -4,6 +4,9 @@
   --accent-color: rgba(255, 108, 0, 1);
   --white-color: rgba(255, 255, 255, 1);
   --haircuts-color: rgba(157, 164, 189, 1);
+  /* BG colors */
+  --dark-bg-cl: #191c26;
+  --accent-bg-cl: #ff6c00;
 }
 
 body {
@@ -14,13 +17,46 @@ body {
   font-weight: 400;
   letter-spacing: 0.02em;
 }
-
-/*navigation*/
-
-.nav {
-  background-color: var(--primary-text-color);
+/*STYLES*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
-/*удалить*/
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+a {
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+img {
+  display: block;
+}
+/*STYLES*/
+/*CONTAINER*/
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+/*HEADER*/
+.header-container {
+  display: flex;
+}
+.header {
+  background-color: black;
+}
 
 .nav .link {
   color: var(--white-color);
@@ -35,7 +71,7 @@ body {
 .nav .link:focus {
   color: var(--accent-color);
 }
-/*telephone*/
+/*TELEPHONE*/
 
 .tel {
   color: var(--white-color);
@@ -49,24 +85,33 @@ body {
 .tel:focus {
   color: var(--accent-color);
 }
-/*button*/
+/*BUTTON*/
+.btn {
+  min-width: 160px;
+  min-height: 40px;
+  padding: 11px 19px;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
 
-.button-booking {
-  color: var(--white-color);
+  background-color: transparent;
 
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  line-height: calc(16 / 12);
   letter-spacing: 0.09em;
   text-transform: uppercase;
-
   cursor: pointer;
 }
-.button-booking:hover,
-.button-booking:focus {
+
+.btn:hover,
+.btn:focus {
   color: var(--accent-color);
+  background-color: var(--accent-bg-cl);
 }
-/*inst-youtube*/
+.btn-theme-dark {
+  color: var(--white-color);
+}
+/*SOCIAL*/
 
 .social .link {
   color: var(--primary-text-color);
@@ -80,7 +125,10 @@ body {
   color: var(--accent-color);
 }
 
-/*hero*/
+/*HERO*/
+.hero {
+  background-color: black;
+}
 
 .hero .text {
   color: var(--haircuts-color);
@@ -105,7 +153,7 @@ body {
   font-size: 18px;
   line-height: 1.67;
 }
-/*about*/
+/*ABOUT*/
 .title-about-first {
   font-weight: 600;
   font-size: 11px;
@@ -194,7 +242,7 @@ body {
   line-height: 1.67;
 }
 
-/*team*/
+/*TEAM*/
 
 .team .title {
   font-family: 'Raleway';
@@ -220,7 +268,7 @@ body {
   line-height: 1.35;
   text-align: center;
 }
-/*gallery*/
+/*GALLERY*/
 .gallery .text {
   font-weight: 600;
   font-size: 11px;
@@ -238,7 +286,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/*contacts*/
+/*CONTACTS*/
 
 .contacts .title {
   color: var(--white-color);
@@ -278,7 +326,7 @@ body {
   text-decoration-line: underline;
 }
 
-/*footer*/
+/*FOOTER*/
 .footer .text {
   color: var(--haircuts-color);
 
