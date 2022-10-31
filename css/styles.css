@@ -54,6 +54,11 @@ ul {
   margin: 0;
   padding: 0;
 }
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .uppertitle-theme-dark {
   color: var(--grey-cl-60);
 }
@@ -166,7 +171,7 @@ ul {
   gap: 40px;
 }
 .header {
-  background-color: rgba(25, 28, 38, 0.2);
+  background-color: var(--dark-bg-cl);
 }
 /*BUTTON*/
 .btn {
@@ -196,27 +201,35 @@ ul {
 }
 
 /*HERO*/
-.social .link {
-  color: var(--primary-text-color);
+.hero {
+  background-color: var(--dark-bg-cl);
+}
+
+.hero-undertitle {
+  width: 360px;
+}
+
+.social-list {
+  color: var(--main-txt-cl);
 
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.36;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
 }
-.social .link:hover,
-.social .link:focus {
+.social-link:hover,
+.social-link:focus {
   color: var(--accent-txt-cl);
 }
-.hero {
-  background-color: rgba(25, 28, 38, 0.2);
-}
-
-.hero .text {
-  color: var(--grey-cl);
-
+.slider-btn {
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.36;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+  background-color: transparent;
+  cursor: pointer;
 }
 .hero .title {
   color: var(--light-txt-cl);
@@ -225,15 +238,9 @@ ul {
   font-weight: 700;
   font-size: 72px;
   line-height: 1.18;
-
   letter-spacing: 0.05em;
 }
-.hero .text-second {
-  color: var(--grey-cl);
 
-  font-size: 18px;
-  line-height: 1.67;
-}
 /*ABOUT*/
 .about-container {
   display: flex;
@@ -251,10 +258,11 @@ ul {
 .about-desc {
   margin-bottom: 42px;
 
+  color: var(--dark-txt-cl);
+
   font-size: 14px;
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
-  color: var(--dark-txt-cl);
 }
 
 /*Services and prices*/
@@ -291,48 +299,40 @@ ul {
   display: block;
   margin: 0 auto;
 }
-/*Why people come to us?*/
-.we .we-numb {
+/* Benefits section */
+.benefits-quantity {
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.35;
-  letter-spacing: 0.05em;
+  line-height: calc(57 / 42);
   text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #303030;
 }
-.we .we-text {
+
+.benefits-decor {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  color: #ff6c00;
+}
+
+.benefits-text {
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.36;
+  line-height: calc(15 / 11);
   text-align: center;
-}
 
-.why-we .title {
-  ont-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
+  color: #303030;
 }
-.why-we .text-why {
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
-}
-.why-we .text {
-  color: var(--second-text-color);
-
-  font-size: 18px;
-  line-height: 1.67;
-}
-
 /*TEAM*/
 .team-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team .title {
+.team-name {
   margin-bottom: 44px;
 
   font-family: 'Raleway';
@@ -341,21 +341,21 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.05em;
 }
-.team .text {
-  margin-bottom: 20px;
+.team-position {
+  margin-bottom: 30px;
 
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
 }
-.team .title-name {
+.team-name {
   margin-bottom: 8px;
 
   font-size: 18px;
   line-height: 1.55;
   text-align: center;
 }
-.team .text-name {
+.team-position {
   color: var(--accent-txt-cl);
 
   font-size: 14px;
@@ -366,13 +366,9 @@ ul {
 .gallery-list {
   --items: 4;
 }
-.gallery .text {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
+.uppertitle-gallery {
+  margin-bottom: 44px;
 }
-
 /*ONLINE BOOKING*/
 
 .booking {
@@ -385,56 +381,33 @@ ul {
 
 /*CONTACTS*/
 
-.contacts .title {
-  color: var(--white-color);
-
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
+.contacts-address {
+  font-style: normal;
 }
-.adress .adress-link {
-  color: var(--haircuts-color);
 
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.67;
+.contacts-link {
+  color: var(--grey-cl);
 }
-.contacts .text {
-  color: var(--white-color);
 
+.contacts-uppertitle {
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.36;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-}
-.contacts .link {
-  color: var(--haircuts-color);
 
-  font-size: 18px;
-  line-height: 1.66;
-}
-.contacts .link-mailto {
-  color: var(--haircuts-color);
-
-  font-size: 18px;
-  line-height: 1.66;
-  text-decoration-line: underline;
+  color: var(--light-txt-cl);
 }
 
+.contacts-schedule {
+  color: var(--grey-cl);
+}
 /*FOOTER*/
-.footer .text {
-  color: var(--haircuts-color);
-
+.footer-copyright {
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.36;
-}
-.footer .link {
-  color: var(--primary-text-color);
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
 
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  color: var(--grey-cl);
 }
