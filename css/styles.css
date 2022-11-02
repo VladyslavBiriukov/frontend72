@@ -63,6 +63,8 @@ ul {
   color: var(--grey-cl-60);
 }
 .uppertitle {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   font-weight: 600;
@@ -70,6 +72,17 @@ ul {
   line-height: calc(15 / 11);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.uppertitle::before {
+  content: '';
+  display: block;
+  margin-right: 20px;
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-txt-cl);
+}
+.uppertitle-theme-dark::before {
+  background-color: var(--grey-cl-60);
 }
 .undertitle {
   margin-bottom: 20px;
