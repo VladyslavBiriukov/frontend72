@@ -135,9 +135,6 @@ ul {
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 /*HEADER*/
@@ -288,8 +285,21 @@ ul {
   padding: 30px 20px;
   flex-basis: 570px;
 }
+.price-list:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
 .price {
+  max-width: 1600px;
+  margin: auto;
   background-color: var(--dark-bg-cl);
+  background-image: url(../images-barber/price.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .price-item {
@@ -302,11 +312,15 @@ ul {
 .price-item:not(:last-child) {
   margin-bottom: 20px;
 }
-.line {
+.price-item::before {
+  content: '';
   display: block;
   flex-grow: 1;
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
+}
+.price-item-service {
+  order: -1;
 }
 .price-btn {
   display: block;
@@ -340,6 +354,9 @@ ul {
   color: #303030;
 }
 /*TEAM*/
+.team {
+  background-color: #f7f7f7;
+}
 .team-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -393,7 +410,25 @@ ul {
 }
 
 /*CONTACTS*/
-
+.contatcs-group {
+  max-width: 1600px;
+  margin: auto;
+  background-image: url(../images-barber/contact-right.png);
+  background-color: var(--dark-bg-cl);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 423px) top 50%;
+}
+.contacts,
+.booking {
+  width: 570px;
+}
+.contacts {
+  padding-left: 100px;
+}
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
 .contacts-address {
   font-style: normal;
 }
