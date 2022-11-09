@@ -1,4 +1,4 @@
-indow.onscroll = () => changeHeaderBackground();
+window.onscroll = () => changeHeaderBackground();
 
 function changeHeaderBackground() {
   const header = document.querySelector('[data-header]');
