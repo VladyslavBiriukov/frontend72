@@ -25,7 +25,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-container container">
         <!--LOGO-->
         <a class="logo" href="./">
@@ -49,8 +49,9 @@
     </header>
     <main>
       <!--HERO-->
-      <section class="section hero">
-        <div class="container">
+      <section class="hero">
+        <div class="hero-container container">
+          <div class="hero-left-side">
           <ul class="social-list">
             <li class="social-link social-item">
               <a class="link" href="" target="_blank" rel="noopener noreferrer nofollow" >Instagram</a
@@ -60,13 +61,18 @@
               <a class="social-link link" href="" target="_blank" rel="noopener noreferrer nofollow" >Youtube</a>
             </li>
           </ul>
+        </div>
           <div class="hero-right-side">
           <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
           <h1 class="title">BarberShop</h1>
           <p class="hero-undertitle undertitle undertitle-theme-dark">
             We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
           </p>
-        </div>
+          <ul class="slider-pagination">
+            <li class="slider-pagination-item active"></li>
+            <li class="slider-pagination-item"></li>
+            <li class="slider-pagination-item"></li>
+          </ul>
           <ul class="slider-list">
             <li class="slider-item">
               <button class="slider-btn" type="button">Back</button>
@@ -75,6 +81,7 @@
               <button class="slider-btn" type="button">Forward</button>
             </li>
           </ul>
+        </div>
         </div>
       </section>
       <!-- ABOUT -->
@@ -284,6 +291,7 @@
         </section>
         </div>
       </div>
+    </main>
       <!-- FOOTER -->
       <footer class="footer">
         <div class="container">
@@ -298,6 +306,6 @@
         </ul>
       </div>
       </footer>
-    </main>
+   <script src="./js/header-scroll.js"></script>
   </body>
 </html>
