@@ -29,7 +29,9 @@
       <div class="header-container container">
         <!--LOGO-->
         <a class="logo" href="./">
-          <img src="./images-barber/Logo.svg" alt="site logo" width="68" height="56" />
+          <svg class="header-logo" width="68" height="56">
+            <use href="./images-barber/icons/sprites.svg#icon-Logo"></use>
+          </svg>
         </a>
         <nav class="header-nav">
           <ul class="header-list">
@@ -40,8 +42,8 @@
           </ul>
         </nav>
         <div class="header-group">
-          <a href="tel:+380441111111" class="tel">+38 044 111 11 11</a>
-          <button type="button" class="btn-theme-dark btn">Online-booking</button>
+          <a class="tel" href="tel:+380441111111">+38 044 111 11 11</a>
+          <button class="btn-theme-dark btn" type="button">Online-booking</button>
         </div>
       </div>
     </header>

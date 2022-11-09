@@ -145,6 +145,9 @@ ul {
 .header-container .logo {
   margin-right: 132px;
 }
+.header-logo {
+  fill: #303030;
+}
 .header-nav {
   margin-right: auto;
 }
