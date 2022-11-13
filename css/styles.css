@@ -681,8 +681,20 @@ ul {
   height: 100%;
 
   background-color: rgba(23, 26, 36, 0.4);
+  opacity: 1;
   backdrop-filter: blur(3px);
   z-index: var(--modal-indx);
+
+  transition: opacity var(--animation-function),
+    visibility var(--animation-function);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: 0;
+  visibility: hidden;
+}
+.backdrop.is-hidden .modal {
+  transform: translateX(-50%) translateY(-50%) scale(1);
 }
 .modal {
   position: absolute;
@@ -691,7 +703,27 @@ ul {
   width: 400px;
   min-height: 500px;
 
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
+  transition: transform var(--animation-function);
+
   background-color: white;
   border-radius: 10px;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+
+  background-color: transparent;
+  border-radius: 40%;
+  border: 2px solid var(--accent-bg-cl);
 }

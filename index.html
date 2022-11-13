@@ -43,7 +43,7 @@
         </nav>
         <div class="header-group">
           <a class="tel" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn-theme-dark btn" type="button">Online-booking</button>
+          <button class="btn-theme-dark btn" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -309,16 +309,17 @@
       </div>
       </footer>
       <!-- MODAL-W -->
-      <div class="backdrop">
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button>
-          <svg class="" width="" height="">
-          <use href=""></use>
+          <button class="modal-btn" data-modal-close>
+          <svg class="modal-icon" width="11px" height="11px">
+          <use href="./images-barber/icons/sprites.svg#icon-Vector"></use>
         </svg>
       </button>
       </div>
       </div>
       <!-- SCRIPT -->
    <script src="./js/header-scroll.js"></script>
+   <script src="./js/modal.js"></script>
   </body>
 </html>
