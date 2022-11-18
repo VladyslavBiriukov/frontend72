@@ -538,11 +538,28 @@
           </ul>
         </div>
       </section>
-      <!-- CONTACTS -->
+      <!-- BOOKING -->
       <div class="contatcs-group" id="contacts">
         <div class="container contacts-container">
           <section class="booking section">
             <h2 class="title title-theme-dark">Online-booking</h2>
+                        <form class="booking-form" name="booking_form">
+                          <div class="booking-group">
+                            <label class="booking-group-field">
+                              <input class="booking-field" type="text" name="user_name" placeholder="John Dou" required minlength="2" />
+                              <span class="booking-label">Name</span>
+                            </label>
+                            <label class="booking-group-field">
+                              <input class="booking-field" type="tel" name="user_phone" placeholder="+38 (099) 123-45-67" required />
+                              <span class="booking-label">Phone</span>
+                            </label>
+                          </div>
+                          <label class="booking-group">
+                            <textarea class="booking-message" name="user_message" rows="5" placeholder="Type your message..."></textarea>
+                            <span class="booking-label">Message</span>
+                          </label>
+                          <button class="btn btn-theme-dark" type="submit">send</button>
+                        </form>
           </section>
           <section class="contacts section">
             <h2 class="title title-theme-dark">Contacts</h2>
