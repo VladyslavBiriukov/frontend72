@@ -617,6 +617,11 @@ ul {
   margin-bottom: 44px;
 }
 /*ONLINE BOOKING*/
+.booking-form {
+  font-size: 18px;
+    line-height: calc(30 / 18);
+    letter-spacing: 0.02em;
+}
 
 .booking {
   font-family: "Raleway";
@@ -626,14 +631,107 @@ ul {
   letter-spacing: 0.05em;
 }
 
+.booking-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  margin-bottom: 44px;
+}
+.booking-group-field {
+  position: relative;
+  flex-basis: 270px;
+}
+.booking-group-field:not(:last-child) {
+  margin-right: 30px;
+}
+.booking-field,
+.booking-message {
+width: 100%;
+height: 24px;
+
+color: white;
+outline: unset;
+border: none;
+border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+background-color: transparent;
+
+font-family: "Open Sans";
+font-weight: 600;
+  font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+
+    transition: border-color var(--animation-function-slow);
+}
+.booking-field::placeholder,
+.booking-message::placeholder {
+  opacity: 0;
+  transition: opacity var(--animation-function);
+}
+.booking-field:focus::placeholder,
+.booking-field:hover::placeholder,
+.booking-message:focus::placeholder,
+.booking-message:hover::placeholder {
+  opacity: 1;
+  transition-delay: 200ms;
+}
+.booking-field:focus,
+.booking-field:hover,
+.booking-message:focus,
+.booking-message:hover,
+ .booking-field:not(:placeholder-shown) {
+  border-color: var(--accent-txt-cl);
+}
+
+.booking-label {
+  position: absolute;
+  top: 0;
+  left: 0 ;
+
+color: rgba(157, 164, 189, 0.4);
+
+text-transform: uppercase;
+  font-weight: 600;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+
+    transform-origin: left;
+    transition: transform var(--animation-function), color var(--animation-function);
+}
+.booking-field:focus + .booking-label,
+.booking-field:hover + .booking-label,
+.booking-message:focus+ .booking-label,
+.booking-message:hover+ .booking-label,
+ .booking-field:not(:placeholder-shown) + .booking-label
+ .booking-message:not(:placeholder-shown)+.booking-label {
+  transform: translateY(-100%) scale(0.9);
+  color: white;
+}
+.booking-field + .booking-label::after {
+  content: "*";
+  color: var(--accent-txt-cl);
+}
+.booking-message {
+  height: 76px;
+  padding-top: 40px;
+  resize: none;
+}
+.booking-message + .booking-label{
+
+}
 /*CONTACTS*/
 .contatcs-group {
   max-width: 1600px;
-  margin: auto;
+  margin: 0 auto;
   background-image: url(../images-barber/contact-right.png);
   background-color: var(--dark-bg-cl);
   background-repeat: no-repeat;
   background-position: left calc(50% + 423px) top 50%;
+}
+.contacts-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 .contacts,
 .booking {
@@ -648,13 +746,26 @@ ul {
 }
 .contacts-address {
   font-style: normal;
+  margin-bottom: 70px;
 }
 
 .contacts-link {
+  display: flex;
+    align-items: center;
+    gap: 16px;
   color: var(--grey-cl);
+
+  transition: color var(--animation-function);
+}
+.contacts-link:hover {
+color: var(--accent-txt-cl);
 }
 
 .contacts-uppertitle {
+  display: flex;
+align-items: center;
+margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -663,9 +774,26 @@ ul {
 
   color: var(--light-txt-cl);
 }
+.contacts-uppertitle:before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: rgba(157, 164, 189, 0.4);
+}
 
 .contacts-schedule {
   color: var(--grey-cl);
+}
+.contacts-text {
+  font-weight: 700;
+}
+.contacts-item:first-child .contacts-icon {
+  margin-top: 6px;
+  align-self: baseline;
+}
+.contacts-icon {
+  fill: var(--grey-cl-60);
 }
 /*FOOTER*/
 .footer-copyright {
@@ -674,7 +802,6 @@ ul {
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
 
-  color: var(--grey-cl);
 }
 
 /* ANIMATIONS */
@@ -738,9 +865,6 @@ ul {
   pointer-events: 0;
   visibility: hidden;
 }
-.modal.modal-animation {
-  animation: rotate-center 0.6s ease-in-out both;
-}
 .backdrop.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(1);
 }
@@ -752,11 +876,12 @@ ul {
   min-height: 500px;
 
   transform-origin: center;
-  /* transform: translateX(-50%) translateY(-50%) scale(0.9); */
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
   transition: transform var(--animation-function);
 
   background-color: white;
   border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .modal-btn {
@@ -774,7 +899,13 @@ ul {
 
   background-color: transparent;
   border-radius: 40%;
-  border: 2px solid var(--accent-bg-cl);
+  border: 2px solid var(--grey-cl);
+
+  transition: fill var(--animation-function-slow), border-color var(--animation-function) ;
+}
+.modal-btn:hover {
+border-color: var(--accent-txt-cl);
+fill: var(--accent-txt-cl);
 }
 
 /* ICONS */
@@ -806,14 +937,6 @@ ul {
 }
 
 /* ANIMATION */
-@keyframes rotate-center {
-  0% {
-    transform: rotate(0) translate(-50%, -50%);
-  }
-  100% {
-    transform: rotate(360deg) translate(-50%, -50%);
-  }
-}
 /* btn */
 @keyframes wobble-hor-bottom {
   0%,
