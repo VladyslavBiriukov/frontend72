@@ -115,6 +115,30 @@ ul {
 
   color: var(--light-txt-cl);
 }
+/* hero-footer-links */
+
+.media-link {
+  display: block;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+
+  color: #303030;
+
+  transition: color var(--animation-function);
+}
+.media-list::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+
+  background-color: #303030;
+}
+.media-link:hover {
+  color: var(--accent-txt-cl);
+}
 /* CARD SET */
 .card-set {
   display: flex;
@@ -273,21 +297,11 @@ ul {
   animation: wobble-hor-bottom 3s infinite both;
 }
 /*HERO*/
-
-.social-list {
-  color: var(--main-txt-cl);
-
-  font-weight: 600;
-  font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.2em;
-
-  transition: color var(--animation-function);
+.hero-media-list {
+  transform: rotate(-90deg) translateY(40px);
+  transform-origin: left;
 }
-.social-link:hover,
-.social-link:focus {
-  color: var(--accent-txt-cl);
-}
+
 .slider-pagination {
   position: absolute;
   top: calc(50% - 15px);
@@ -757,7 +771,8 @@ text-transform: uppercase;
 
   transition: color var(--animation-function);
 }
-.contacts-link:hover {
+.contacts-link:hover,
+ .contacts-link:focus {
 color: var(--accent-txt-cl);
 }
 
@@ -795,13 +810,28 @@ margin-bottom: 20px;
 .contacts-icon {
   fill: var(--grey-cl-60);
 }
+
 /*FOOTER*/
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .footer-copyright {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
-
+  color: var(--grey-cl);
+}
+.media-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.footer-link{
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 /* ANIMATIONS */
@@ -872,8 +902,10 @@ margin-bottom: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
-  min-height: 500px;
+
+  width: 500px;
+  min-height: 600px;
+  padding: 35px;
 
   transform-origin: center;
   transform: translateX(-50%) translateY(-50%) scale(0.9);
@@ -907,7 +939,123 @@ margin-bottom: 20px;
 border-color: var(--accent-txt-cl);
 fill: var(--accent-txt-cl);
 }
+/* modal-form */
+.modal-form-group {
+  margin-bottom: 20px;
+}
+.modal-form-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.modal-form-label {
+  display: block;
+  margin-bottom: 5px;
 
+  font-size: 12px;
+  font-weight: 600;
+}
+.modal-form-field {
+  width: 100%;
+  height: 45px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  border: 1px solid var(--grey-cl-60);
+  border-radius: 3px;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  transition: outline-color var(--animation-function), box-shadow var(--animation-function-slow);
+}
+.modal-form-field:focus {
+  outline-color: var(--accent-txt-cl);
+  box-shadow: 0 0 0 5px rgba(255, 108, 0, 0.3);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  transition: fill var(--animation-function);
+}
+.modal-form-field:focus + .modal-form-icon {
+  fill: var(--accent-txt-cl);
+}
+.modal-form-message {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 14px;
+
+  resize: none;
+
+  border: 1px solid var(--grey-cl-60);
+  border-radius: 6px;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  font-size: 14px;
+
+  transition: outline-color var(--animation-function), box-shadow var(--animation-function-slow);
+}
+.modal-form-message:focus {
+  outline-color: var(--accent-txt-cl);
+  box-shadow: 0 0 0 3px rgba(255, 108, 0, 0.3);
+}
+.modal-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.modal-form-agreement-desc {
+  font-size: 14px;
+  user-select: none;
+}
+.modal-form-agreement-link {
+  color: var(--accent-txt-cl);
+  text-underline-position: under;
+  text-underline-offset: 1px;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+.modal-form-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  border: 1px solid var(--grey-cl);
+  border-radius: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+ background-size: 0;
+
+  transition: outline-color var(--animation-function), background-color var(--animation-function),
+  box-shadow var(--animation-function-slow), background-size var(--animation-function-slow);
+}
+.modal-form-checkbox:checked {
+  outline-color:var(--accent-txt-cl);
+  background-color: var(--accent-bg-cl);
+  box-shadow: 0 0 0 3px rgba(255, 108, 0, 0.3);
+  background-image: url(../images-barber/icons/checked.svg);
+  background-size: contain;
+}
+
+.modal-form-btn {
+  display: block;
+  margin: 0 auto;
+}
 /* ICONS */
 .social-list {
   display: flex;
