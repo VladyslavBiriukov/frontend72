@@ -976,6 +976,14 @@ fill: var(--accent-txt-cl);
   outline-color: var(--accent-txt-cl);
   box-shadow: 0 0 0 5px rgba(255, 108, 0, 0.3);
 }
+.modal-form-field:not(:placeholder-shown):valid:required {
+  outline-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.3);
+}
+.modal-form-field:not(:placeholder-shown):invalid:required {
+  outline-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.3);
+}
 
 .modal-form-icon {
   position: absolute;
@@ -984,6 +992,12 @@ fill: var(--accent-txt-cl);
   transform: translateY(-50%);
 
   transition: fill var(--animation-function);
+}
+.modal-form-field:not(:placeholder-shown):valid:required + .modal-form-icon {
+  fill: rgb(0, 114, 0);
+}
+.modal-form-field:not(:placeholder-shown):invalid:required + .modal-form-icon {
+  fill: rgb(114, 0, 0);
 }
 .modal-form-field:focus + .modal-form-icon {
   fill: var(--accent-txt-cl);
@@ -1005,6 +1019,33 @@ fill: var(--accent-txt-cl);
 
   transition: outline-color var(--animation-function), box-shadow var(--animation-function-slow);
 }
+/* attention-icon */
+.warning,
+.success {
+  opacity: 0;
+  transition: var(--animation-function-slow);
+  transform: scale(0.3);
+  transform-origin: center;
+}
+.modal-form-icon-attention {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  
+}
+.modal-form-field:not(:placeholder-shown):invalid:required ~ .modal-form-icon-attention .warning {
+  opacity: 1;
+  fill: rgba(255, 0, 0, 0.5);
+  transform: scale(1);
+}
+.modal-form-field:not(:placeholder-shown):valid:required ~ .modal-form-icon-attention .success {
+  opacity: 1;
+  fill: rgba(0, 255, 0, 0.5);
+  transform: scale(1);
+}
+
+/* message */
 .modal-form-message:focus {
   outline-color: var(--accent-txt-cl);
   box-shadow: 0 0 0 3px rgba(255, 108, 0, 0.3);
