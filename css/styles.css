@@ -248,7 +248,7 @@ ul {
   left: 50%;
   bottom: 30%;
 
-  transform: translateX(-50%) scaleX(0.3);
+  transform: translateY(90deg);
 
   display: block;
   width: 90%;
