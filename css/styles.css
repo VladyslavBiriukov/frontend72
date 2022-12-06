@@ -246,9 +246,9 @@ ul {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 30%;
+  bottom: -30%;
 
-  transform: translateY(90deg);
+transform: translateX(-50%) scaleX(0.3);
 
   display: block;
   width: 90%;
