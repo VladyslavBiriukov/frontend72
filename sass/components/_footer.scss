@@ -1,0 +1,14 @@
+.footer__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+    letter-spacing: 0.2em;
+    color: var(--grey-cl);
+}

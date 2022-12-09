@@ -1,0 +1,109 @@
+
+.booking {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+}
+
+.booking__form {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    letter-spacing: 0.02em;
+}
+.booking__group {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 44px;
+}
+
+.booking__wrapper {
+    position: relative;
+    flex-basis: 270px;
+    
+    &:not(:last-child) {
+    margin-right: 30px;
+}
+}
+
+.booking__field,
+.booking__message {
+    width: 100%;
+    height: 24px;
+
+    color: white;
+    outline: unset;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    background-color: transparent;
+
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+
+    transition: border-color var(--animation-function-slow);
+}
+
+.booking__field::placeholder,
+.booking__message::placeholder {
+    opacity: 0;
+    transition: opacity var(--animation-function);
+}
+
+.booking__field:focus::placeholder,
+.booking__field:hover::placeholder,
+.booking__message:focus::placeholder,
+.booking__message:hover::placeholder {
+    opacity: 1;
+    transition-delay: 200ms;
+}
+
+.booking__field:focus,
+.booking__field:hover,
+.booking__message:focus,
+.booking__message:hover,
+.booking__field:not(:placeholder-shown) {
+    border-color: var(--accent-txt-cl);
+}
+
+.booking__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: rgba(157, 164, 189, 0.4);
+
+    text-transform: uppercase;
+    font-weight: 600;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+
+    transform-origin: left;
+    transition: transform var(--animation-function), color var(--animation-function);
+}
+
+.booking__field:focus+.booking__label,
+.booking__field:hover+.booking__label,
+.booking__message:focus+.booking__label,
+.booking__message:hover+.booking__label,
+.booking__field:not(:placeholder-shown)+.booking-label .booking__message:not(:placeholder-shown)+.booking-label {
+    transform: translateY(-100%) scale(0.9);
+    color: white;
+}
+
+.booking__field+.booking__label::after {
+    content: "*";
+    color: var(--accent-txt-cl);
+}
+
+.booking__message {
+    height: 76px;
+    padding-top: 40px;
+    resize: none;
+}

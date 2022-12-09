@@ -1,0 +1,14 @@
+.gallery {
+    @extend %section;
+}
+.gallery__container {
+    @extend %container;
+}
+.gallery-list {
+    @extend %card-set;
+
+    --items: 4;
+}
+.gallery-item {
+    @extend %card-set__item;
+}

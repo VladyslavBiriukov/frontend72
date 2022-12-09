@@ -1,0 +1,27 @@
+:root {
+    /* Fonts */
+    --main-font: "Open Sans", sans-serif;
+    --secondary-font: "Raleway", sans-serif;
+
+    /* Text colors */
+    --main-txt-cl: rgb(48, 48, 48);
+    --accent-txt-cl: rgb(255, 108, 0);
+    --light-txt-cl: #ffffff;
+    --dark-txt-cl: rgb(85, 85, 85);
+
+    --grey-cl: rgb(157, 164, 189);
+    --grey-cl-60: rgba(157, 164, 189, 0.6);
+
+    /* BG colors */
+    --dark-bg-cl: rgb(25, 28, 38);
+    --accent-bg-cl: rgb(255, 108, 0);
+
+    /* Others */
+    --btn-radius: 25px;
+    --indent: 30px;
+    --items: 3;
+    --heared-indx: 10;
+    --modal-indx: 100;
+    --animation-function: 300ms ease-out;
+    --animation-function-slow: 800ms ease;
+}

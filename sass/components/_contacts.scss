@@ -1,0 +1,87 @@
+.contacts {
+    padding-left: 100px;
+}
+.contacts,
+.booking {
+    @extend %section;
+    width: 570px;
+}
+
+.contacts__container {
+    @extend %container;
+
+    display: flex;
+    justify-content: space-between;
+}
+.contatcs__group {
+    max-width: 1600px;
+    margin: 0 auto;
+
+    background-image: url(../images-barber/contact-right.png);
+    background-color: var(--dark-bg-cl);
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 423px) top 50%;
+}
+
+.contacts-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.contacts__item:first-child .contacts__icon {
+    margin-top: 6px;
+    align-self: baseline;
+}
+
+.contacts__address {
+    font-style: normal;
+    margin-bottom: 70px;
+}
+
+.contacts__link {
+    @extend %link;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--grey-cl);
+
+    transition: color var(--animation-function);
+&:hover
+&:focus {
+    color: var(--accent-txt-cl);
+}
+}
+
+.contacts__uppertitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15 / 11);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--light-txt-cl);
+
+    &:before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: rgba(157, 164, 189, 0.4);
+}
+}
+
+.contacts__schedule {
+    color: var(--grey-cl);
+}
+
+.contacts__text {
+    font-weight: 700;
+}
+
+.contacts__icon {
+    fill: var(--grey-cl-60);
+}

@@ -1,0 +1,30 @@
+/*STYLES*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
+a {
+    text-decoration: none;
+    /* Отменяем подчеркивание у ссылки */
+}
+
+img {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

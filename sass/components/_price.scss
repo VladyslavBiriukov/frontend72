@@ -1,0 +1,63 @@
+.price {
+    @extend %section;
+
+    max-width: 1600px;
+    margin: auto;
+    
+    background-color: var(--dark-bg-cl);
+    background-image: url(../images-barber/price.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+  .price__block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+  }
+
+  .price__list {
+      padding: 30px 20px;
+      flex-basis: 570px;
+
+      &:first-child {
+      background-image: linear-gradient(180deg,
+              #171a24 0%,
+              rgba(23, 26, 36, 0.2) 100%);
+  }
+
+      &:last-child {
+      background-image: linear-gradient(180deg,
+              #090b13 0%,
+              rgba(9, 11, 19, 0.2) 100%);
+  }
+}
+
+  .price__item {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+
+      color: var(--grey-cl);
+
+  &:not(:last-child) {
+      margin-bottom: 20px;
+  }
+
+  &::before {
+      content: "";
+      display: block;
+      flex-grow: 1;
+      height: 1px;
+      background-color: rgba(157, 164, 189, 0.12);
+  }
+}
+
+  .price__item--service {
+      order: -1;
+  }
+
+  .price__btn {
+      display: block;
+      margin: 0 auto;
+  }
