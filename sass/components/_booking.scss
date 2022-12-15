@@ -14,24 +14,28 @@
 }
 .booking__group {
     position: relative;
-    display: flex;
+    // display: flex;
     align-items: center;
-
-    margin-bottom: 44px;
+    // margin-bottom: 44px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 30px;
+    }
 }
 
 .booking__wrapper {
     position: relative;
-    flex-basis: 270px;
-    
-    &:not(:last-child) {
-    margin-right: 30px;
+    // flex-basis: 270px; 
+    @media screen and (min-width: 768px) {
+        flex-basis: 330px;
 }
+//     &:not(:last-child) {
+//     margin-right: 30px;
+// }
 }
 
 .booking__field,
 .booking__message {
-    width: 100%;
     height: 24px;
 
     color: white;
@@ -47,6 +51,18 @@
     line-height: 1.35;
 
     transition: border-color var(--animation-function-slow);
+
+}
+.booking__field {
+    margin-bottom: 44px;
+    width: 100%;
+
+    // @media screen and (min-width: 768px) {
+    //     width: 330px;
+    // }
+}
+.booking__message {
+    width: 100%;
 }
 
 .booking__field::placeholder,
@@ -103,7 +119,20 @@
 }
 
 .booking__message {
-    height: 76px;
-    padding-top: 40px;
+    // height: 76px;
+    // padding-top: 40px;
+    height: 60px;
+    margin-bottom: 44px;
     resize: none;
+}
+.booking__label--message {
+    top: -100px;
+    @media screen and (min-width: 768px) {
+        top: 0;
+    }
+}
+
+.booking__btn {
+    display: block;
+    margin: 0 auto;
 }

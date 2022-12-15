@@ -5,7 +5,14 @@
 .benefits__container {
     @extend %container;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
     gap: 30px;
+
+    @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+            flex-direction: row;
+}
 }
 
 .benefits__quantity {
@@ -45,11 +52,22 @@
 }
 
 .benefits__right-side {
-    width: 500px;
+    max-width: 418px;
+
+        @media screen and (min-width: 768px) {
+                max-width: 500px;
+            }
 }
 
 .benefits__left-side {
     width: 50%;
+
+    @media screen and (min-width: 768px) {
+     margin-left: auto;
+}
+    @media screen and (min-width: 1200px) {
+     margin-left: 0;
+}
 }
 
 .benefits__list {

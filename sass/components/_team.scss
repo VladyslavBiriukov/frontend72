@@ -1,13 +1,26 @@
 .team {
     @extend %section;
-}
 
+    padding-bottom: 0;
+}
+.team__container {
+    @extend %container;
+
+    @media screen and (max-width: 1199px) {
+            max-width: 480px;
+}
+}
 .team__wrapper {
-    padding-top: 30px;
+    padding: 30px 10px 0;
 }
 
 .team__list {
     @extend %card-set;
+    --items: 1;
+    
+    @media screen and (min-width: 1200px) {
+                --items: 3;
+}
 }
 
 .tema__item {

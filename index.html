@@ -56,11 +56,25 @@
           <button
             class="btn btn--theme-dark"
             type="button"
-            data-modal-open
-          >
+            data-modal-open>
             Online-booking
           </button>
         </div>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -121,20 +135,62 @@
         <div class="about-container">
           <ul class="about__list">
             <li class="about__item">
-              <img
-                src="./images-barber/section-one-barber.jpg"
-                alt="haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images-barber/about/img1_desk@1x.webp 1x, ./images-barber/about/img1_desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images-barber/about/img1_desk@1x.jpg 1x, ./images-barber/about/img1_desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images-barber/about/img1_tab@1x.webp 1x, ./images-barber/about/img1_tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images-barber/about/img1_tab@1x.jpg 1x, ./images-barber/about/img1_tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img src="./images-barber/about/img1_tab@1x.jpg" 
+                alt="Beard shaving" 
+                loading="lazy" />
+              </picture>
             </li>
             <li class="about__item">
-              <img
-                src="./images-barber/section-two-barber.jpg"
-                alt="haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images-barber/about/img2_desk@1x.webp 1x, ./images-barber/about/img2_desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images-barber/about/img2_desk@1x.jpg 1x, ./images-barber/about/img2_desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images-barber/about/img2_tab@1x.webp 1x, ./images-barber/about/img2_tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images-barber/about/img2_tab@1x.jpg 1x, ./images-barber/about/img2_tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img src="./images-barber/about/img2_tab@1x.jpg" 
+                alt="Beard shaving" 
+                loading="lazy" />
+              </picture>
             </li>
           </ul>
           <div class="about__right-side">
@@ -157,7 +213,7 @@
       </section>
       <!-- PRICE -->
       <section class="price" id="prices">
-        <div class="container">
+        <div class="price__container">
           <p class="uppertitle uppertitle--theme-dark">
             spend your time with the best masters
           </p>
@@ -241,18 +297,51 @@
       </section>
       <!-- TEAM -->
       <section class="team" id="barbers">
-        <div class="container">
+        <div class="team__container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
           <ul class="team__list">
             <li class="team__item">
               <div class="team__thumb">
-                <img
-                  src="./images-barber/john-smith.jpg"
-                  alt="barbercut"
-                  width="370"
-                  height="346"
-                />
+              <picture>
+                <!-- desktop -->
+                <source 
+              media="(min-width: 1200px)" 
+              srcset="./images-barber/team/img1_desk@1x.webp 1x, ./images-barber/team/img1_desk@2x.webp 2x"
+              type="image/webp">
+
+                <source 
+              media="(min-width: 1200px)" 
+              srcset="./images-barber/team/img1_desk@1x.jpg 1x, ./images-barber/team/img1_desk@2x.jpg 2x"
+              type="image/jpg">
+
+                <!-- tablet -->
+                <source 
+              media="(min-width: 768px)" 
+              srcset="./images-barber/team/img1_tab@1x.webp 1x, ./images-barber/team/img1_tab@2x.webp 2x"
+              type="image/webp">
+
+                <source 
+              media="(min-width: 768px)" 
+              srcset="./images-barber/team/img1_tab@1x.jpg 1x, ./images-barber/team/img1_tab@2x.jpg 2x"
+              type="image/jpg">
+                <!-- phone -->
+                <source 
+              media="(max-width: 767px)" 
+              srcset="./images-barber/team/img1_mob@1x.webp 1x, ./images-barber/team/img1_mob@2x.webp 2x"
+              type="image/webp">
+
+                <source 
+              media="(max-width: 767px)" 
+              srcset="./images-barber/team/img1_mob@1x.jpg 1x, ./images-barber/team/img1_mob@2x.jpg 2x"
+              type="image/jpg">
+                
+              <img 
+              src="./images-barber/team/img1_tab@1x.jpg" 
+              alt="John Smith" 
+              height="346"
+              loading="lazy">
+            </picture>
                 <div class="team__overlay">
                   <p class="overlay__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -330,12 +419,38 @@
             </li>
             <li class="team__item">
               <div class="team__thumb">
-                <img
-                  src="./images-barber/michele-doe.jpg"
-                  alt="barbercut"
-                  width="370"
-                  height="346"
-                />
+                <picture>
+                <!-- desktop -->
+                <source media="(min-width: 1200px)"
+                  srcset="./images-barber/team/img2_desk@1x.webp 1x, ./images-barber/team/img2_desk@2x.webp 2x"
+                  type="image/webp">
+                
+                <source media="(min-width: 1200px)"
+                  srcset="./images-barber/team/img2_desk@1x.jpg 1x, ./images-barber/team/img2_desk@2x.jpg 2x" 
+                  type="image/jpg">
+                
+                <!-- tablet -->
+                <source media="(min-width: 768px)"
+                  srcset="./images-barber/team/img2_tab@1x.webp 1x, ./images-barber/team/img2_tab@2x.webp 2x" 
+                  type="image/webp">
+                
+                <source media="(min-width: 768px)"
+                  srcset="./images-barber/team/img2_tab@1x.jpg 1x, ./images-barber/team/img2_tab@2x.jpg 2x"
+                  type="image/jpg">
+                <!-- phone -->
+                <source media="(max-width: 767px)"
+                  srcset="./images-barber/team/img2_mob@1x.webp 1x, ./images-barber/team/img2_mob@2x.webp 2x" 
+                  type="image/webp">
+                
+                <source media="(max-width: 767px)"
+                  srcset="./images-barber/team/img2_mob@1x.jpg 1x, ./images-barber/team/img2_mob@2x.jpg 2x"
+                  type="image/jpg">
+               <img 
+                src="./images-barber/team/img2_tab@1x.jpg" 
+                alt="Michele Doe" 
+                height="346"
+                loading="lazy">
+            </picture>
                 <div class="team__overlay">
                   <p class="overlay__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -413,12 +528,45 @@
             </li>
             <li class="team__item">
               <div class="team__thumb">
-                <img
-                  src="./images-barber/alan-black.jpg"
-                  alt="barbercut"
-                  width="370"
-                  height="346"
-                />
+              <picture>
+                <!-- desktop -->
+               <source 
+               media="(min-width: 1200px)" 
+               srcset="./images-barber/team/img3_desk@1x.webp 1x, ./images-barber/team/img3_desk@2x.webp 2x"
+               type="image/webp" >
+
+               <source 
+               media="(min-width: 1200px)" 
+               srcset="./images-barber/team/img3_desk@1x.jpg 1x, /images-barber/team/img3_desk@2x.webp 2x"
+               type="image/jpg" >
+               
+              <!-- tablet -->
+                <source 
+                media="(min-width: 768px)" 
+                srcset="./images-barber/team/img3_tab@1x.webp 1x, ./images-barber/team/img3_tab@2x.webp 2x"
+                type="image/webp">
+
+                <source 
+                media="(min-width: 768px)" 
+                srcset="./images-barber/team/img3_tab@1x.jpg 1x, ./images-barber/team/img3_tab@2x.webp 2x"
+                type="image/jpg">
+              <!-- phone -->
+                <source 
+                media="(max-width: 767px)" 
+                srcset="./images-barber/team/img3_mob@1x.webp 1x, ./images-barber/team/img3_mob@2x.webp 2x"
+                type="image/webp">
+                
+                <source 
+                media="(max-width: 767px)" 
+                srcset="./images-barber/team/img3_mob@1x.jpg 1x, ./images-barber/team/img3_mob@2x.jpg 2x"
+                type="image/jpg">
+
+                <img 
+                src="./images-barber/team/img3_mob@1x.jpg" 
+                alt="Alan Black" 
+                height="346"
+                loading="lazy">
+              </picture>
                 <div class="team__overlay">
                   <p class="overlay__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -507,33 +655,73 @@
           <ul class="gallery-list">
             <li class="gallery-item">
               <img
-                src="./images-barber/rectangle-one.jpg"
+                class="gallety_image"
+                srcset="
+                images-barber/gallery/img25_270.jpg 270w,
+                images-barber/gallery/img25_330.jpg 330w,
+                images-barber/gallery/img25_418.jpg 418w,
+                images-barber/gallery/img25_540.jpg 540w,
+                images-barber/gallery/img25_660.jpg 660w,
+                images-barber/gallery/img25_836.jpg 836w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
+                src="./images-barber/gallery/img25_418.jpg"
                 alt="barbers gallery"
-                width="270"
+                loading="lazy"
                 height="360"
               />
             </li>
             <li class="gallery-item">
               <img
-                src="./images-barber/rectangle-two.jpg"
+              class="gallety_image"
+                srcset="
+                images-barber/gallery/img26_270.jpg 270w,
+                images-barber/gallery/img26_330.jpg 330w,
+                images-barber/gallery/img26_418.jpg 418w,
+                images-barber/gallery/img26_540.jpg 540w,
+                images-barber/gallery/img26_660.jpg 660w,
+                images-barber/gallery/img26_836.jpg 836w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
+                src="./images-barber/gallery/img26_418.jpg"
                 alt="barbers gallery"
-                width="270"
+                loading="lazy"
                 height="360"
               />
             </li>
             <li class="gallery-item">
               <img
-                src="./images-barber/rectangle-three.jpg"
+              class="gallety_image"
+                srcset="
+                images-barber/gallery/img27_270.jpg 270w,
+                images-barber/gallery/img27_330.jpg 330w,
+                images-barber/gallery/img27_418.jpg 418w,
+                images-barber/gallery/img27_540.jpg 540w,
+                images-barber/gallery/img27_660.jpg 660w,
+                images-barber/gallery/img27_836.jpg 836w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
+                src="./images-barber/gallery/img27_418.jpg"
                 alt="barbers gallery"
-                width="270"
+                loading="lazy"
                 height="360"
               />
             </li>
             <li class="gallery-item">
               <img
-                src="./images-barber/rectangle-four.jpg"
+              class="gallety_image"
+                srcset="
+                images-barber/gallery/img28_270.jpg 270w,
+                images-barber/gallery/img28_330.jpg 330w,
+                images-barber/gallery/img28_418.jpg 418w,
+                images-barber/gallery/img28_540.jpg 540w,
+                images-barber/gallery/img28_660.jpg 660w,
+                images-barber/gallery/img28_836.jpg 836w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
+                src="./images-barber/gallery/img28_418.jpg"
                 alt="barbers gallery"
-                width="270"
+                loading="lazy"
                 height="360"
               />
             </li>
@@ -545,7 +733,7 @@
         <div class="contacts__container">
           <section class="booking">
             <h2 class="title title--theme-dark">Online-booking</h2>
-                        <form class="booking__form" name="booking_form">
+              <form class="booking__form" name="booking_form">
                           <div class="booking__group">
                             <label class="booking__wrapper">
                               <input class="booking__field" type="text" name="user_name" placeholder="John Dou" required minlength="2" />
@@ -558,10 +746,10 @@
                           </div>
                           <label class="booking__group">
                             <textarea class="booking__message" name="user_message" rows="5" placeholder="Type your message..."></textarea>
-                            <span class="booking__label">Message</span>
+                            <span class="booking__label booking__label--message">Message</span>
                           </label>
-                          <button class="btn btn--theme-dark" type="submit">send</button>
-                        </form>
+                          <button class="booking__btn btn btn--theme-dark" type="submit">send</button>
+              </form>
           </section>
           <section class="contacts">
             <h2 class="title title--theme-dark">Contacts</h2>
@@ -576,8 +764,7 @@
                   <svg class="contacts__icon" width="24" height="24">
                     <use href="./images-barber/icons/sprites.svg#icon-map-pin"></use>
                   </svg>
-                    <span class="contacts__text">Vasilkovaya,</br> 7A
-                    Kiev, 08132
+                    <span class="contacts__text">Vasilkovaya,7A Kiev, 08132
                     </span>
                   </a>
                 </li>
@@ -688,9 +875,67 @@
         </form>
       </div>
     </div>
+      <!-- Mobile menu -->
+    <!-- <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Студія</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Портфоліо</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts list">
+        <li class="mobile-contacts-item">
+          <a href="" class="mobile-contacts-link link">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-contacts-item">
+          <a href="" class="mobile-contacts-link link">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-socials list">
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-social-link link">Instagram</a>
+        </li>
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-social-link link">Twitter</a>
+        </li>
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-social-link link">Facebook</a>
+        </li>
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-social-link link">LinkedIn</a>
+        </li>
+      </ul>
+    </div> -->
     <!-- SCRIPT -->
     <!-- <script src="./js/switch.js"></script> -->
     <script src="./js/header-scroll.js"></script>
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

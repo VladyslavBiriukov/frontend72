@@ -6,8 +6,14 @@
 }
 .gallery-list {
     @extend %card-set;
+    --items: 1;
 
-    --items: 4;
+    @media screen and (min-width: 768px) {
+            --items: 2;
+            }
+    @media screen and (min-width: 1200px) {
+            --items: 4;
+        }
 }
 .gallery-item {
     @extend %card-set__item;

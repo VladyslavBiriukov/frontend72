@@ -4,16 +4,38 @@
 }
 
 %section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 84px;
+    padding-bottom: 84px;
+    @media  screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media  screen and (min-width: 1200px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 %container {
-    width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
+    // phone screen
+        @media screen and (min-width: 480px) {
+            width: 448px;
+        }
+    
+        // tablet screen
+        @media screen and (min-width: 768px) {
+            width: 720px;
+        }
+    
+        // desktop screen
+        @media screen and (min-width: 1200px) {
+            width: 1200px;
+        }
 }
 
 %card-set {
