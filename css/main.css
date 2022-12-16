@@ -326,8 +326,10 @@ ul {
   }
 }
 .title--theme-dark {
+  font-size: 42px;
   margin-bottom: 44px;
   text-align: center;
+  line-height: 1.1666666667;
   color: var(--light-txt-cl);
 }
 @media screen and (min-width: 768px) {
@@ -1248,6 +1250,12 @@ ul {
     gap: 30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .booking__group {
+    gap: 0;
+    margin-bottom: 44px;
+  }
+}
 
 .booking__wrapper {
   position: relative;
@@ -1256,6 +1264,18 @@ ul {
   .booking__wrapper {
     -ms-flex-preferred-size: 330px;
         flex-basis: 330px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .booking__wrapper {
+    -ms-flex-preferred-size: 270px;
+        flex-basis: 270px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .booking__wrapper:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -1407,12 +1427,18 @@ ul {
 
 .booking__message {
   height: 60px;
-  margin-bottom: 44px;
   resize: none;
+}
+@media screen and (min-width: 1200px) {
+  .booking__message {
+    height: 76px;
+    padding-top: 40px;
+  }
 }
 
 .booking__label--message {
-  top: -100px;
+  top: -40px;
+  right: 0;
 }
 @media screen and (min-width: 768px) {
   .booking__label--message {
@@ -1423,11 +1449,19 @@ ul {
 .booking__btn {
   display: block;
   margin: 0 auto;
+  margin-top: 44px;
 }
 
 @media screen and (min-width: 1200px) {
   .contacts {
     padding-left: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts,
+.booking {
+    width: 570px;
   }
 }
 
@@ -1440,12 +1474,58 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (min-width: 1200px) {
+  .contacts__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__wrapper {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__time {
+    display: block;
+  }
+}
 
 .contatcs__group {
   max-width: 1600px;
   margin: 0 auto;
   background-color: var(--dark-bg-cl);
   background-repeat: no-repeat;
+  background-image: url(../images-barber/footer/img_mob@1x.png);
+  background-position: bottom;
 }
 
 .contacts-item:not(:last-child) {
@@ -1466,6 +1546,17 @@ ul {
   color: var(--grey-cl);
   -webkit-transition: color var(--animation-function);
   transition: color var(--animation-function);
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
 }
 .contacts__link:hover .contacts__link:focus {
   color: var(--accent-txt-cl);
