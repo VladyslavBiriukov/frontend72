@@ -48,24 +48,24 @@
   }
 }
 
-.footer__container, .contacts__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
+.footer__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 480px) {
-  .footer__container, .contacts__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
+  .footer__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
     width: 448px;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer__container, .contacts__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
+  .footer__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
     width: 720px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__container, .contacts__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
+  .footer__container, .gallery__container, .team__container, .benefits__container, .price__container, .about-container, .hero__container, .header__container {
     width: 1200px;
   }
 }
@@ -335,6 +335,23 @@ ul {
 @media screen and (min-width: 768px) {
   .title--theme-dark {
     text-align: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title--booking {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title--contacts {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title--contacts {
+    margin-left: 0;
   }
 }
 
@@ -1238,15 +1255,33 @@ ul {
   line-height: 1.6666666667;
   letter-spacing: 0.02em;
 }
-
-.booking__group {
+@media screen and (max-width: 767px) {
+  .booking__form {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .booking__form {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .booking__form {
+    margin-right: 0;
+  }
+}
+.booking__form .booking__group,
+.booking__form .booking__message-label {
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .booking__group {
+  .booking__form .booking__group,
+.booking__form .booking__message-label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1254,36 +1289,34 @@ ul {
   }
 }
 @media screen and (min-width: 1200px) {
-  .booking__group {
+  .booking__form .booking__group,
+.booking__form .booking__message-label {
     gap: 0;
     margin-bottom: 44px;
   }
 }
-
-.booking__wrapper {
+.booking__form .booking__wrapper {
   position: relative;
 }
 @media screen and (min-width: 768px) {
-  .booking__wrapper {
+  .booking__form .booking__wrapper {
     -ms-flex-preferred-size: 330px;
         flex-basis: 330px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
-  .booking__wrapper {
+  .booking__form .booking__wrapper {
     -ms-flex-preferred-size: 270px;
         flex-basis: 270px;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  .booking__wrapper:not(:last-child) {
+  .booking__form .booking__wrapper:not(:last-child) {
     margin-right: 30px;
   }
 }
-
-.booking__field,
-.booking__message {
+.booking__form .booking__field,
+.booking__form .booking__message {
   height: 24px;
   color: white;
   outline: unset;
@@ -1298,94 +1331,83 @@ ul {
   -webkit-transition: border-color var(--animation-function-slow);
   transition: border-color var(--animation-function-slow);
 }
-
-.booking__field {
+.booking__form .booking__field {
   margin-bottom: 44px;
   width: 100%;
 }
-
-.booking__message {
+.booking__form .booking__message {
   width: 100%;
 }
-
-.booking__field::-webkit-input-placeholder, .booking__message::-webkit-input-placeholder {
+@media screen and (min-width: 768px) {
+  .booking__form .booking__message {
+    width: 690px;
+  }
+}
+.booking__form .booking__field::-webkit-input-placeholder, .booking__form .booking__message::-webkit-input-placeholder {
   opacity: 0;
   -webkit-transition: opacity var(--animation-function);
   transition: opacity var(--animation-function);
 }
-
-.booking__field::-moz-placeholder, .booking__message::-moz-placeholder {
+.booking__form .booking__field::-moz-placeholder, .booking__form .booking__message::-moz-placeholder {
   opacity: 0;
   -moz-transition: opacity var(--animation-function);
   transition: opacity var(--animation-function);
 }
-
-.booking__field:-ms-input-placeholder, .booking__message:-ms-input-placeholder {
+.booking__form .booking__field:-ms-input-placeholder, .booking__form .booking__message:-ms-input-placeholder {
   opacity: 0;
   -ms-transition: opacity var(--animation-function);
   transition: opacity var(--animation-function);
 }
-
-.booking__field::-ms-input-placeholder, .booking__message::-ms-input-placeholder {
+.booking__form .booking__field::-ms-input-placeholder, .booking__form .booking__message::-ms-input-placeholder {
   opacity: 0;
   -ms-transition: opacity var(--animation-function);
   transition: opacity var(--animation-function);
 }
-
-.booking__field::placeholder,
-.booking__message::placeholder {
+.booking__form .booking__field::placeholder,
+.booking__form .booking__message::placeholder {
   opacity: 0;
   -webkit-transition: opacity var(--animation-function);
   transition: opacity var(--animation-function);
 }
-
-.booking__field:focus::-webkit-input-placeholder, .booking__field:hover::-webkit-input-placeholder, .booking__message:focus::-webkit-input-placeholder, .booking__message:hover::-webkit-input-placeholder {
+.booking__form .booking__field:focus::-webkit-input-placeholder, .booking__form .booking__field:hover::-webkit-input-placeholder, .booking__form .booking__message:focus::-webkit-input-placeholder, .booking__form .booking__message:hover::-webkit-input-placeholder {
   opacity: 1;
   -webkit-transition-delay: 200ms;
           transition-delay: 200ms;
 }
-
-.booking__field:focus::-moz-placeholder, .booking__field:hover::-moz-placeholder, .booking__message:focus::-moz-placeholder, .booking__message:hover::-moz-placeholder {
+.booking__form .booking__field:focus::-moz-placeholder, .booking__form .booking__field:hover::-moz-placeholder, .booking__form .booking__message:focus::-moz-placeholder, .booking__form .booking__message:hover::-moz-placeholder {
   opacity: 1;
   transition-delay: 200ms;
 }
-
-.booking__field:focus:-ms-input-placeholder, .booking__field:hover:-ms-input-placeholder, .booking__message:focus:-ms-input-placeholder, .booking__message:hover:-ms-input-placeholder {
+.booking__form .booking__field:focus:-ms-input-placeholder, .booking__form .booking__field:hover:-ms-input-placeholder, .booking__form .booking__message:focus:-ms-input-placeholder, .booking__form .booking__message:hover:-ms-input-placeholder {
   opacity: 1;
   transition-delay: 200ms;
 }
-
-.booking__field:focus::-ms-input-placeholder, .booking__field:hover::-ms-input-placeholder, .booking__message:focus::-ms-input-placeholder, .booking__message:hover::-ms-input-placeholder {
+.booking__form .booking__field:focus::-ms-input-placeholder, .booking__form .booking__field:hover::-ms-input-placeholder, .booking__form .booking__message:focus::-ms-input-placeholder, .booking__form .booking__message:hover::-ms-input-placeholder {
   opacity: 1;
   transition-delay: 200ms;
 }
-
-.booking__field:focus::placeholder,
-.booking__field:hover::placeholder,
-.booking__message:focus::placeholder,
-.booking__message:hover::placeholder {
+.booking__form .booking__field:focus::placeholder,
+.booking__form .booking__field:hover::placeholder,
+.booking__form .booking__message:focus::placeholder,
+.booking__form .booking__message:hover::placeholder {
   opacity: 1;
   -webkit-transition-delay: 200ms;
           transition-delay: 200ms;
 }
-
-.booking__field:not(:-moz-placeholder-shown) {
+.booking__form .booking__field:not(:-moz-placeholder-shown) {
   border-color: var(--accent-txt-cl);
 }
-
-.booking__field:not(:-ms-input-placeholder) {
+.booking__form .booking__field:not(:-ms-input-placeholder) {
   border-color: var(--accent-txt-cl);
 }
-
-.booking__field:focus,
-.booking__field:hover,
-.booking__message:focus,
-.booking__message:hover,
-.booking__field:not(:placeholder-shown) {
+.booking__form .booking__field:focus,
+.booking__form .booking__field:hover,
+.booking__form .booking__message:focus,
+.booking__form .booking__message:hover,
+.booking__form .booking__field:not(:placeholder-shown) {
   border-color: var(--accent-txt-cl);
 }
-
-.booking__label {
+.booking__form .booking__label {
   position: absolute;
   top: 0;
   left: 0;
@@ -1402,49 +1424,43 @@ ul {
   transition: transform var(--animation-function), color var(--animation-function);
   transition: transform var(--animation-function), color var(--animation-function), -webkit-transform var(--animation-function);
 }
-
-.booking__field:not(:-moz-placeholder-shown) + .booking-label .booking__message:not(:-moz-placeholder-shown) + .booking-label {
+.booking__form .booking__field:not(:-moz-placeholder-shown) + .booking-label .booking__message:not(:-moz-placeholder-shown) + .booking-label {
   transform: translateY(-100%) scale(0.9);
   color: white;
 }
-
-.booking__field:not(:-ms-input-placeholder) + .booking-label .booking__message:not(:-ms-input-placeholder) + .booking-label {
+.booking__form .booking__field:not(:-ms-input-placeholder) + .booking-label .booking__message:not(:-ms-input-placeholder) + .booking-label {
   transform: translateY(-100%) scale(0.9);
   color: white;
 }
-
-.booking__field:focus + .booking__label,
-.booking__field:hover + .booking__label,
-.booking__message:focus + .booking__label,
-.booking__message:hover + .booking__label,
-.booking__field:not(:placeholder-shown) + .booking-label .booking__message:not(:placeholder-shown) + .booking-label {
+.booking__form .booking__field:focus + .booking__label,
+.booking__form .booking__field:hover + .booking__label,
+.booking__form .booking__message:focus + .booking__label,
+.booking__form .booking__message:hover + .booking__label,
+.booking__form .booking__field:not(:placeholder-shown) + .booking-label .booking__message:not(:placeholder-shown) + .booking-label {
   -webkit-transform: translateY(-100%) scale(0.9);
           transform: translateY(-100%) scale(0.9);
   color: white;
 }
-
-.booking__field + .booking__label::after {
+.booking__form .booking__field + .booking__label::after {
   content: "*";
   color: var(--accent-txt-cl);
 }
-
-.booking__message {
+.booking__form .booking__message {
   height: 60px;
   resize: none;
 }
 @media screen and (min-width: 1200px) {
-  .booking__message {
+  .booking__form .booking__message {
     height: 76px;
     padding-top: 40px;
   }
 }
-
-.booking__label--message {
+.booking__form .booking__label--message {
   top: -40px;
   right: 0;
 }
 @media screen and (min-width: 768px) {
-  .booking__label--message {
+  .booking__form .booking__label--message {
     top: 0;
   }
 }
@@ -1455,9 +1471,37 @@ ul {
   margin-top: 44px;
 }
 
+.contacts {
+  background-size: cover;
+  background-image: url(../images-barber/footer/img_mob@1x.png);
+  background-position: bottom;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url(../images-barber/footer/img_mob@2x.png);
+  }
+}
+@media screen and (min-width: 481px) {
+  .contacts {
+    background-image: url(../images-barber/footer/img_tab@1x.png);
+    background-position: bottom;
+  }
+}
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url(../images-barber/footer/img_tab@2x.png);
+  }
+}
 @media screen and (min-width: 1200px) {
   .contacts {
     padding-left: 100px;
+    background-image: url(../images-barber/footer/img_desk@1x.png);
+    background-position: left calc(50% + 423px) top 50%;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url(../images-barber/footer/img_desk@2x.png);
   }
 }
 
@@ -1489,6 +1533,11 @@ ul {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .contacts__wrapper {
+    margin-left: 35px;
+  }
+}
 @media screen and (min-width: 768px) {
   .contacts__wrapper {
     display: -webkit-box;
@@ -1497,11 +1546,14 @@ ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-left: 43px;
+    margin-right: 120px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts__wrapper {
     display: block;
+    margin-left: 0;
   }
 }
 
@@ -1527,35 +1579,6 @@ ul {
   margin: 0 auto;
   background-color: var(--dark-bg-cl);
   background-repeat: no-repeat;
-  background-image: url(../images-barber/footer/img_mob@1x.png);
-  background-position: bottom;
-}
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .contatcs__group {
-    background-image: url(../images-barber/footer/img_mob@2x.png);
-  }
-}
-@media screen and (min-width: 481px) {
-  .contatcs__group {
-    background-image: url(../images-barber/footer/img_tab@1x.png);
-    background-position: bottom;
-  }
-}
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
-  .contatcs__group {
-    background-image: url(../images-barber/footer/img_tab@2x.png);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contatcs__group {
-    background-image: url(../images-barber/footer/img_desk@1x.png);
-    background-position: left calc(50% + 423px) top 50%;
-  }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .contatcs__group {
-    background-image: url(../images-barber/footer/img_desk@2x.png);
-  }
 }
 
 .contacts-item:not(:last-child) {

@@ -64,7 +64,19 @@
     }
 }
 }
-
+.title--booking {
+       @media screen and (min-width: 768px) {
+        margin-left: 40px;
+    } 
+}
+.title--contacts {
+         @media screen and (min-width: 768px) {
+        margin-left: 40px;
+    } 
+        @media screen and (min-width: 1200px) {
+        margin-left: 0;
+    }
+}
 .uppertitle--gallery {
     margin-bottom: 44px;
 }

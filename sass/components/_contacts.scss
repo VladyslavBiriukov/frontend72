@@ -1,8 +1,34 @@
 .contacts {
-    @media screen and (min-width: 1200px) {
-    padding-left: 100px;
+    background-size: cover;
+    // phone
+        background-image: url(../images-barber/footer/img_mob@1x.png);
+        background-position: bottom ;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images-barber/footer/img_mob@2x.png);
+} 
+    // tablet
+        @media screen and (min-width: 481px) {
+        background-image: url(../images-barber/footer/img_tab@1x.png);
+        background-position: bottom;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images-barber/footer/img_tab@2x.png);
+
 }
 }
+    // desktop
+        @media screen and (min-width: 1200px) {
+            padding-left: 100px;
+        background-image: url(../images-barber/footer/img_desk@1x.png);
+        background-position: left calc(50% + 423px) top 50%;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images-barber/footer/img_desk@2x.png);
+}
+} 
+}
+
 .contacts,
 .booking {
     @extend %section;
@@ -12,7 +38,7 @@
 }
 
 .contacts__container {
-    @extend %container;
+    // @extend %container;
 
     display: flex;
     flex-direction: column;
@@ -23,13 +49,19 @@
     }
 }
 .contacts__wrapper {
+    @media screen and (max-width: 767px) {
+        margin-left: 35px;
+    }
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: space-between;
+        margin-left: 43px;
+        margin-right: 120px;
     }
 
     @media screen and (min-width: 1200px) {
         display: block;
+        margin-left: 0; 
     }
 }
 
@@ -50,34 +82,6 @@
 
     background-color: var(--dark-bg-cl);
     background-repeat: no-repeat;
-    // background-size: cover;
-
-    // phone
-        background-image: url(../images-barber/footer/img_mob@1x.png);
-        background-position: bottom ;
-
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(../images-barber/footer/img_mob@2x.png);
-} 
-    // tablet
-        @media screen and (min-width: 481px) {
-        background-image: url(../images-barber/footer/img_tab@1x.png);
-        background-position: bottom;
-
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(../images-barber/footer/img_tab@2x.png);
-
-}
-}
-    // desktop
-        @media screen and (min-width: 1200px) {
-        background-image: url(../images-barber/footer/img_desk@1x.png);
-        background-position: left calc(50% + 423px) top 50%;
-
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(../images-barber/footer/img_desk@2x.png);
-}
-}
 }
 
 .contacts-item:not(:last-child) {

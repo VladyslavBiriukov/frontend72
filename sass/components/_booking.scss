@@ -11,11 +11,21 @@
     font-size: 18px;
     line-height: calc(30 / 18);
     letter-spacing: 0.02em;
+        @media screen and (max-width: 767px) {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+        @media screen and (min-width: 768px) {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+        @media screen and (min-width: 1200px) {
+        margin-right: 0;
 }
-.booking__group {
+.booking__group,
+.booking__message-label {
     position: relative;
     align-items: center;
-    
     @media screen and (min-width: 768px) {
         display: flex;
         gap: 30px;
@@ -25,6 +35,7 @@
         margin-bottom: 44px;
 }
 }
+
 
 .booking__wrapper {
     position: relative;
@@ -67,6 +78,10 @@
 }
 .booking__message {
     width: 100%;
+    @media screen and (min-width: 768px) {
+           width: 690px;
+        }
+
 }
 
 .booking__field::placeholder,
@@ -137,6 +152,7 @@
     @media screen and (min-width: 768px) {
         top: 0;
     }
+}
 }
 
 .booking__btn {
