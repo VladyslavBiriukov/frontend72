@@ -17,7 +17,7 @@
     color: var(--dark-bg-cl);
     background-color: var(--grey-cl-60);
     border-radius: 50%;
-    transition: color, background-color;
+    transition: color var(--animation-function), background-color var(--animation-function);
 
     &:hover,
     &:focus {
